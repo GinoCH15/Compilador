@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="632.0" prefWidth="898.0" style="-fx-background-color: #DFDFDF;" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Interfaz.interfazController">
+   <children>
+      <Label layoutX="582.0" layoutY="429.0" text="Consola:">
+         <font>
+            <Font name="Roboto" size="14.0" />
+         </font>
+      </Label>
+      <TextArea fx:id="consolaTextArea" editable="false" layoutX="582.0" layoutY="457.0" prefHeight="112.0" prefWidth="302.0" />
+      <TableView fx:id="tablaSimbolosTable" layoutX="581.0" layoutY="50.0" prefHeight="372.0" prefWidth="302.0">
+        <columns>
+          <TableColumn fx:id="tokenTableColumn" editable="false" minWidth="0.0" prefWidth="58.0" text="Token" />
+          <TableColumn fx:id="cantidadTableColumn" editable="false" minWidth="0.0" prefWidth="58.0" text="Cantidad" />
+            <TableColumn fx:id="tipoTableColumn" editable="false" prefWidth="185.0" text="Tipo" />
+        </columns>
+      </TableView>
+      <JFXButton fx:id="generarTablaSimbolosButton" layoutX="783.0" layoutY="582.0" onAction="#generarTablaSimbolosButtonEvent" prefHeight="25.0" prefWidth="101.0" style="-fx-background-color: #FFFFFF; -fx-background-radius: 30px; -fx-border-radius: 30px;" text="Generar tabla">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <Label layoutX="582.0" layoutY="25.0" text="Tabla de símbolos">
+         <font>
+            <Font name="Roboto" size="14.0" />
+         </font>
+      </Label>
+      <JFXButton fx:id="ejecutarButton" layoutX="584.0" layoutY="582.0" onAction="#ejecutarButtonEvent" prefHeight="18.0" prefWidth="88.0" style="-fx-background-color: #FFFFFF; -fx-background-radius: 30px; -fx-border-radius: 30px;" text="Ejecutar" textAlignment="CENTER">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton fx:id="limpiarButton" layoutX="683.0" layoutY="582.0" onAction="#limpiarButtonEvent" prefHeight="18.0" prefWidth="88.0" style="-fx-background-color: #FFFFFF; -fx-background-radius: 30px; -fx-border-radius: 30px;" text="Limpiar" textAlignment="CENTER">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <TextArea fx:id="codigoTextArea" layoutX="118.0" layoutY="25.0" prefHeight="588.0" prefWidth="440.0" />
+      <ListView fx:id="lineaCodigoList" layoutX="92.0" layoutY="25.0" prefHeight="588.0" prefWidth="26.0" />
+      <ListView fx:id="lineaErrorList" layoutX="66.0" layoutY="25.0" prefHeight="588.0" prefWidth="26.0" />
+      <AnchorPane layoutX="-2.0" prefHeight="632.0" prefWidth="33.0">
+         <children>
+            <JFXButton layoutX="7.0" layoutY="582.0" text=" " />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
