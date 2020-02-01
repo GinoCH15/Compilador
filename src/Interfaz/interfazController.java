@@ -1,5 +1,6 @@
 package Interfaz;
 
+import Analisis.AnalisisLexico;
 import Objetos.TablaCodigo;
 import Objetos.TablaSimbolos;
 import com.jfoenix.controls.JFXButton;
@@ -43,6 +44,11 @@ public class interfazController implements Initializable{
     @FXML
     void ejecutarButtonEvent(ActionEvent event) {
         String textoConsola = codigoTextArea.getText();
+        
+        AnalisisLexico analizadorLexico = new AnalisisLexico("");
+        if(analizadorLexico.hayError()){
+            System.out.println(analizadorLexico.lineaError());
+        }
     }
 
     @FXML
